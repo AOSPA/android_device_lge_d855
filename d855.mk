@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2016 The Paranoid Android Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,11 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+LOCAL_PATH := device/lge/d855
 
-# Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/lge/d855/d855-vendor.mk)
+$(call inherit-product, device/lge/g3-common/g3.mk)
+$(call inherit-product, vendor/lge/d855/d855-vendor.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -66,6 +67,3 @@ PRODUCT_COPY_FILES += \
     device/lge/g3-common/wcnss/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
     device/lge/g3-common/wcnss/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     device/lge/g3-common/wcnss/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
-
-# common g3
-$(call inherit-product, device/lge/g3-common/g3.mk)

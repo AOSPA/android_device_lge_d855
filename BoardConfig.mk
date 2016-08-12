@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2016 The Paranoid Android Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,8 +14,7 @@
 # limitations under the License.
 #
 
-# inherit from common g3
--include device/lge/g3-common/BoardConfigCommon.mk
+include device/lge/g3-common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := g3,d855
 
@@ -28,7 +27,7 @@ BLUETOOTH_HCI_USE_MCT := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d855/bluetooth
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_d855_defconfig
+TARGET_KERNEL_CONFIG := d855_defconfig
 TARGET_REQUIRES_BUMP := true
 
 # Partitions
@@ -72,6 +71,3 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 #FM Radio
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
-
-# inherit from the proprietary version
--include vendor/lge/d855/BoardConfigVendor.mk

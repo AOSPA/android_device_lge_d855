@@ -1,3 +1,7 @@
+#
+# System.prop for the LG G3 (D855)
+#
+
 # Radio
 persist.radio.do_not_init_csvt=1
 rild.libargs=-d /dev/smd0
