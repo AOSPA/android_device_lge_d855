@@ -1,5 +1,5 @@
 #
-# Copyright 2014 The CyanogenMod Project
+# Copyright (C) 2016 The Paranoid Android Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter d855,$(TARGET_DEVICE)),)
+ifeq ($(TARGET_DEVICE),d855)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 # Create a link for the WCNSS config file, which ends up as a writable
